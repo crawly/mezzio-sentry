@@ -1,0 +1,41 @@
+{
+    "name": "crawly/mezzio-sentry",
+    "description": "Mezzio integration for Sentry.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luiz Henrique Gomes Palacio",
+            "email": "lhpalacio@outlook.com"
+        }
+    ],
+    "extra": {
+        "zf": {
+            "config-provider": "MezzioSentry\\ConfigProvider"
+        },
+        "laminas": {
+            "config-provider": "MezzioSentry\\ConfigProvider"
+        }
+    },
+    "require": {
+        "php": "^7.3",
+        "psr/http-message": "^1.0",
+        "sentry/sdk": "^2.0",
+        "psr/http-server-middleware": "^1.0",
+        "psr/container": "^1.0",
+        "laminas/laminas-stratigility": "^3.2"
+    },
+    "suggest": {
+        "mezzio/mezzio-problem-details": "Problem Details for PSR-7 Applications"
+    },
+    "autoload": {
+        "psr-4": {
+            "MezzioSentry\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MezzioSentryTest\\": "test/"
+        }
+    }
+}
